@@ -1,0 +1,7 @@
+function myFuntion(){
+	var iD = document.getElementById("board").innerHTML;
+	for (var i=0; i<=9; i++){
+		document.querySelector("div").className = "box";
+		element.classList.add("square")
+	}
+}

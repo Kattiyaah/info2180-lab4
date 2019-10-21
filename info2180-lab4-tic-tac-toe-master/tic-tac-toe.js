@@ -57,19 +57,18 @@ function firstFunction(){
 
 function checkWinner(arr){
     	var list =["X","O"];
-    	var l;
     	var p = 0;
     	while (p<2){
-    		l = list[p];
-    		if(((arr[0]==l) && (arr[1]==l) && (arr[2]==l))|| ((arr[3]==l) && (arr[4]==l) && (arr[5]==l))|| ((arr[6]==l) && (arr[7]==l) && (arr[8]==l))|| ((arr[0]==l) && (arr[3]==l) && (arr[6]==l))|| ((arr[1]==l) && (arr[4]==l) && (arr[7]==l))|| ((arr[2]==l) && (arr[5]==l) && (arr[8]==l))
-|| ((arr[0]==l) && (arr[4]==l) && (arr[8]==l))|| ((arr[2]==l) && (arr[4]==l) && (arr[6]==l)))
-    			{displayCongrats(l);}
+    		win = list[p];
+    		if(((arr[0]==win) && (arr[1]==win) && (arr[2]==win))|| ((arr[3]==win) && (arr[4]==win) && (arr[5]==win))|| ((arr[6]==win) && (arr[7]==win) && (arr[8]==win))|| ((arr[0]==win) && (arr[3]==win) && (arr[6]==win))|| ((arr[1]==win) && (arr[4]==win) && (arr[7]==win))|| ((arr[2]==win) && (arr[5]==win) && (arr[8]==win))
+|| ((arr[0]==win) && (arr[4]==win) && (arr[8]==win))|| ((arr[2]==win) && (arr[4]==win) && (arr[6]==win)))
+    			{displayCongrats(win);}
     		p = p +1;
     	}}
 
-function displayCongrats(l){
+function displayCongrats(win){
     var stat = document.getElementById("status");
-    stat.innerHTML = "Congratulations! " + l + " is the Winner!";
+    stat.innerHTML = "Congratulations! " + win + " is the Winner!";
     stat.classList.add("won");}
 
 function hoverHandler(element){
@@ -87,7 +86,8 @@ function clickFunction(a,b,c,d,e,f,g,h,i){
     f.onclick = function(){clickHandler(f,5);}
     g.onclick = function(){clickHandler(g,6);}
     h.onclick = function(){clickHandler(h,7);}
-    i.onclick = function(){clickHandler(i,8);}}
+    i.onclick = function(){clickHandler(i,8);}
+}
 
 function hoverFunction(a,b,c,d,e,f,g,h,i){
     a.onmouseover = function(){hoverHandler(a);}
@@ -98,7 +98,8 @@ function hoverFunction(a,b,c,d,e,f,g,h,i){
 	f.onmouseover = function(){hoverHandler(f)}
 	g.onmouseover = function(){hoverHandler(g)}
 	h.onmouseover = function(){hoverHandler(h)}
-	i.onmouseover = function(){hoverHandler(i)}}
+	i.onmouseover = function(){hoverHandler(i)}
+}
 
 function hoverOFunction(a,b,c,d,e,f,g,h,i){
 	a.onmouseout = function(){hoverOHandler(a);}
@@ -109,7 +110,8 @@ function hoverOFunction(a,b,c,d,e,f,g,h,i){
 	f.onmouseout = function(){hoverOHandler(f)}
 	g.onmouseout = function(){hoverOHandler(g)}
 	h.onmouseout = function(){hoverOHandler(h)}
-	i.onmouseout = function(){hoverOHandler(i)}}
+	i.onmouseout = function(){hoverOHandler(i)}
+}
 
 
 
